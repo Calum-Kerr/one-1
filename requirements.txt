@@ -1,0 +1,28 @@
+# Flask and extensions
+Flask>=2.0.0
+Werkzeug>=2.0.0
+
+# PDF processing
+PyMuPDF>=1.18.0    # for fitz module
+ocrmypdf>=14.0.0   # for OCR functionality
+Pillow>=9.0.0      # for image handling
+
+# Text processing
+html5lib>=1.1      # for HTML entity handling
+regex>=2022.1.18   # for advanced text processing
+
+# Type hints support
+typing-extensions>=4.0.0
+
+# Security
+python-dotenv>=0.19.0  # for environment variables
+Flask-WTF>=1.0.0      # for form handling and CSRF protection
+
+# Development tools
+black>=22.3.0       # code formatting
+pylint>=2.12.0      # code linting
+pytest>=7.0.0       # testing
+pytest-cov>=3.0.0   # test coverage
+
+# Mime type detection
+python-magic>=0.4.27  # for mime type detection

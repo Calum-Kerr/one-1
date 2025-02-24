@@ -1,3 +1,6 @@
+import math
+
+
 def extract_transform_matrix(span):
     """Extract full transform matrix from span"""
     return span.get('transform', [1, 0, 0, 1, 0, 0])

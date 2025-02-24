@@ -1,3 +1,6 @@
+import math
+
+
 def extract_rotation(span):
     """Extract rotation angle from span"""
     matrix = span.get('transform', [1, 0, 0, 1, 0, 0])

@@ -1,20 +1,31 @@
+from werkzeug.datastructures import FileStorage
+import magic
 import os
 from utils.error_handler import PDFError
 
 class InputValidator:
+    ALLOWED_MIME_TYPES = {'application/pdf'}
+    MAX_FILE_SIZE = 100 * 1024 * 1024  # 100MB
+
     @staticmethod
-    def validate_pdf_file(filepath):
-        """Validate PDF file existence and format"""
-        if not os.path.exists(filepath):
-            raise PDFError("File not found")
+    def validate_pdf_file(file: FileStorage) -> bool:
+        """Validate uploaded file"""
+        if not isinstance(file, FileStorage):
+            return False
             
-        if not filepath.lower().endswith('.pdf'):
-            raise PDFError("Invalid file format")
-            
-        if os.path.getsize(filepath) > 100 * 1024 * 1024:  # 100MB
-            raise PDFError("File too large")
+        # Check file size
+        file.seek(0, os.SEEK_END)
+        size = file.tell()
+        file.seek(0)
         
-        return True
+        if size > InputValidator.MAX_FILE_SIZE:
+            return False
+            
+        # Check mime type
+        mime = magic.from_buffer(file.read(2048), mime=True)
+        file.seek(0)
+        
+        return mime in InputValidator.ALLOWED_MIME_TYPES
 
     @staticmethod
     def validate_bbox(bbox):
