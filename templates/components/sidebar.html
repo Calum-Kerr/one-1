@@ -1,0 +1,37 @@
+<div class="editor-sidebar bg-light border-end" style="width: 300px;">
+    <div class="p-3">
+        <h5 class="mb-3">Document Properties</h5>
+        
+        <div class="mb-3">
+            <label class="form-label">Page Navigation</label>
+            <div class="input-group">
+                <input type="number" class="form-control" id="pageNumber" min="1">
+                <span class="input-group-text" id="totalPages">/1</span>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Zoom</label>
+            <select class="form-select" id="zoomLevel">
+                <option value="0.5">50%</option>
+                <option value="0.75">75%</option>
+                <option value="1" selected>100%</option>
+                <option value="1.5">150%</option>
+                <option value="2">200%</option>
+            </select>
+        </div>
+
+        <hr>
+
+        <div class="mb-3">
+            <label class="form-label">Text Properties</label>
+            <input type="color" class="form-control" id="textColor">
+            <select class="form-select mt-2" id="fontSize">
+                <option value="12">12pt</option>
+                <option value="14">14pt</option>
+                <option value="16">16pt</option>
+                <option value="18">18pt</option>
+            </select>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="editor-toolbar bg-light p-2 border-bottom">
+    <div class="btn-group me-2">
+        <button class="btn btn-outline-primary style-btn" data-style="bold">
+            <i class="bi bi-type-bold"></i>
+        </button>
+        <button class="btn btn-outline-primary style-btn" data-style="italic">
+            <i class="bi bi-type-italic"></i>
+        </button>
+        <button class="btn btn-outline-primary style-btn" data-style="underline">
+            <i class="bi bi-type-underline"></i>
+        </button>
+    </div>
+    
+    <div class="btn-group me-2">
+        <button class="btn btn-outline-secondary" id="undoBtn">
+            <i class="bi bi-arrow-counterclockwise"></i>
+        </button>
+        <button class="btn btn-outline-secondary" id="redoBtn">
+            <i class="bi bi-arrow-clockwise"></i>
+        </button>
+    </div>
+    
+    <select class="form-select d-inline-block w-auto me-2" id="fontSelect">
+        <option value="Times-Roman">Times Roman</option>
+        <option value="Helvetica">Helvetica</option>
+        <option value="Courier">Courier</option>
+    </select>
+    
+    <button class="btn btn-success" id="saveBtn">Save Changes</button>
+</div>

@@ -1,0 +1,32 @@
+.pdf-container {
+    position: relative;
+    min-height: calc(100vh - 60px);
+    background: #f0f0f0;
+    overflow: auto;
+}
+
+.text-span {
+    position: absolute;
+    cursor: text;
+    user-select: text;
+    transition: background-color 0.2s;
+}
+
+.text-span:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.text-span.selected {
+    background-color: rgba(0, 123, 255, 0.2);
+}
+
+.editor-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.style-btn.active {
+    background-color: #0d6efd;
+    color: white;
+}
